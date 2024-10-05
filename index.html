@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Traverse!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="brand">
+            <img src="brand.png" alt="Brand Logo" class="brand-logo">
+            <span>Traverse</span>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book</a></li>
+            <li>
+                <a href="#">Packages</a>
+                <ul>
+                    <li><a href="#">United States</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="window.location.href='login.html';">Login</button>
+            <button id="registerBtn" onclick="window.location.href='register.html';">Register</button>
+        </div>
+    </nav>
+
+
+      
+    
+        
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <h1>Welcome to Traverse!</h1>
+        <h2 id="dynamic-countries">Visit United States</h2>
+        <button class="book-now">Book Now</button>
+    </section>
+
+    <!-- Image & Form Section -->
+    <section class="row">
+        <div class="column image-column">
+            <img src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Company Image">
+            
+            <!-- company-image.jpg -->
+        </div>
+        <div class="column form-column">
+            <form id="booking-form">
+                <label for="destination">Where to:</label>
+                <select id="destination" required>
+                    <option value="United States">United States</option>
+                    <option value="India">India</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                </select>
+
+                <label for="persons">How Many Persons:</label>
+                <input type="number" id="persons" name="persons" min="1" max="10" required>
+
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required>
+
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" minlength="50" maxlength="500" required></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Package Gallery Section -->
+    <section class="package-gallery">
+        <h2>Package Gallery</h2>
+        <div class="package-row">
+            <!-- Row 1 -->
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/2353333/pexels-photo-2353333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 1">
+                <h3>Spain</h3>
+                <p>Explore Spain’s vibrant cities, stunning coastlines, and rich history!</p>
+                <p>Price: $950</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 2">
+                <h3>USA</h3>
+                <p>Visit Times Square, Statue of Liberty, and more!</p>
+                <p>Price: $1050</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 3">
+                <h3>Japan</h3>
+                <p>Explore temples, tech, and cuisine!</p>
+                <p>Price: $1400</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+        </div>
+       
+        <div class="package-row">
+            <!-- Row 2 -->
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/574313/pexels-photo-574313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 4">
+                <h3>India</h3>
+                <p>Experience India’s vibrant culture, stunning sights, and historic wonders!</p>
+                <p>Price: $1275</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/2615031/pexels-photo-2615031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 5">
+                <h3>Australia</h3>
+                <p>Discover Australia’s stunning landscapes, unique wildlife, and vibrant cities!</p>
+                <p>Price: $1100</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/1128416/pexels-photo-1128416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 6">
+                <h3>Germany</h3>
+                <p>Experience Germany’s rich history, charming towns, and stunning landscapes!</p>
+                <p>Price: $975</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="package-row">
+            <!-- Row 3 -->
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 7">
+                <h3>France</h3>
+                <p>Enjoy France’s iconic landmarks, world-class cuisine, and picturesque landscapes!</p>
+                <p>Price: $1350</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/457937/pexels-photo-457937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 8">
+                <h3>Canada</h3>
+                <p>Explore Canada’s breathtaking nature, vibrant cities, and diverse culture!</p>
+                <p>Price: $1300</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <img src="https://images.pexels.com/photos/27896633/pexels-photo-27896633/free-photo-of-estadio-walmir-campelo-bezerra-bezerrao.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Place 9">
+                <h3>Brazil</h3>
+                <p>Experience Brazil’s lively culture, stunning beaches, and vibrant cities—adventure awaits!</p>
+                <p>Price: $1175</p>
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Affordable Hotel</li>
+            <li>Food & Drinks</li>
+            <li>Safety Guide</li>
+            <li>Travel Insurance</li>
+            <li>Local Tours</li>
+            <li>Personalized Itineraries</li>
+        </ul>
+    </section>
+    
+<!-- Gallery Section -->
+<section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/27670662/pexels-photo-27670662/free-photo-of-worship-worth-attention.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/307007/pexels-photo-307007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1446624/pexels-photo-1446624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/2845013/pexels-photo-2845013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5851949/pexels-photo-5851949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1959065/pexels-photo-1959065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/34704/martin-luther-church-pray-church-of-our-lady.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 8">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/63332/science-world-false-creek-vancouver-british-columbia-63332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gallery Image 9">
+        </div>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+<section class="about-us">
+    <div class="about-image">
+        <img src="https://images.pexels.com/photos/1632074/pexels-photo-1632074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="About Us Image">
+    </div>
+    <div class="about-info">
+        <h2>About Us</h2>
+        <p>Established in 2020, our company has quickly become a trusted name in the travel industry, dedicated to offering unparalleled travel experiences that inspire and captivate. In just a few years, we have specialized in crafting unique journeys across the globe, meticulously tailoring each trip to reflect the individual preferences and desires of our customers. From breathtaking city escapes to tranquil nature retreats, our diverse range of destinations caters to all types of travelers.</p><br><br>
+        <p>Our passionate team of professionals is at the heart of everything we do. With a shared love for travel and a commitment to excellence, we strive to provide top-notch services that ensure every aspect of your journey is seamless and enjoyable. We understand that no two travelers are alike; whether you're seeking adventure-filled excursions, leisurely getaways, or a perfect blend of both, we are here to create the ideal travel package just for you.</p><br><br>
+        <p>Our mission goes beyond merely facilitating travel; we aim to forge connections, foster understanding, and enrich lives through the beauty of exploration. Join us in discovering the wonders of the world, immersing yourself in new cultures, and creating unforgettable memories that will last a lifetime. With our expertise and dedication, we are excited to help turn your travel dreams into a breathtaking reality.</p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="brand">Traverse!</div>
+    <div class="social-icons">
+        <a href="#" title="Instagram"><i class="bi-instagram"></i></a>
+        <a href="#" title="Facebook"><i class="bi-facebook"></i></a>
+        <a href="#" title="Twitter"><i class="bi-twitter"></i></a>
+    </div>
+    <div class="copyright">
+        &copy; 2020 Traverse! All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

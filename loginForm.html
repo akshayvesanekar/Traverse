@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the same CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff; /* White background for the form */
+        }
+
+        h2 {
+            text-align: center;
+            color: #e11d48; /* Title color */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%; /* Responsive width */
+            margin: 0 auto; /* Center the form */
+            gap: 15px; /* Space between elements */
+        }
+
+        label {
+            font-weight: bold;
+            color: #333; /* Label color */
+        }
+
+        input,
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #e11d48; /* Button color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #fb7185; /* Hover color */
+        }
+
+        p {
+            text-align: center; /* Center text */
+        }
+
+        a {
+            color: #e11d48; /* Link color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Login Form</h2>
+    <div class="form-column">
+        <form id="formLogin">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button> <!-- Button with styles -->
+            <p>Don't have an account? <a href="registerForm.html">Register here</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your script file -->
+</body>
+</html>

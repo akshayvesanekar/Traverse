@@ -1,0 +1,440 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e11d48;
+    padding: 10px 20px;
+}
+
+.brand {
+    font-size: 24px;
+    color: #ffe4e6;
+}
+
+.brand-logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #fb7185;
+    border-radius: 5px;
+}
+
+/* Dropdown menu for Packages */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #ffe4e6;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    display: block;
+}
+
+/* Login and Register buttons */
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons button {
+    background-color: #fecdd3;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-buttons button:hover {
+    background-color: #fb7185;
+}
+
+/* Background image */
+.hero {
+    background: url(bg.jpg) no-repeat center center/cover;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.hero h2 {
+    font-size: 64px;
+    margin-bottom: 200px;
+    margin-top: 40px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Book Now Button */
+.book-now {
+    padding: 15px 30px;
+    background-color: #fecdd3;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.book-now:hover {
+    background-color: #fb7185;
+}
+
+/* Row and Columns for Image & Form Section */
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+.column {
+    width: 48%;
+}
+
+.image-column img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form-column form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-column form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-column form input,
+.form-column form select,
+.form-column form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-column form button {
+    padding: 15px 30px;
+    background-color: #e11d48;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-column form button:hover {
+    background-color: #fb7185;
+}
+
+/* Package Gallery Section */
+.package-gallery {
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.package-gallery h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative; /* Needed for reflection effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.package-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.package-card {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd; /* Light border around the card */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.package-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.package-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.package-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.package-card button {
+    padding: 10px 20px;
+    background-color: #e11d48;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.package-card button:hover {
+    background-color: #fb7185;
+}
+
+/* Rating section in package cards */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.selected {
+    color: #e11d48;
+}
+
+/* Services Section */
+.services {
+    padding: 40px;
+    background-color: #ffe4e6;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative; /* Needed for reflection effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.services ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.services ul li {
+    font-size: 18px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #ddd;
+}
+
+.services ul li:hover {
+    background-color: #f8f8f8; /* Change background color on hover */
+    transform: translateY(-5px); /* Lift the card slightly */
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px;
+    background-color: #f0f0f0;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    padding: 60px;
+    background-color: #fff;
+    gap: 40px;
+}
+
+.about-us .about-image {
+    width: 50%;
+}
+
+.about-us .about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-us .about-info {
+    width: 50%;
+}
+
+.about-us .about-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e11d48;
+}
+
+.about-us .about-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background-color: #e11d48;
+    color: #ffe4e6;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .brand {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffcad4;
+}
+
+footer .copyright {
+    font-size: 16px;
+}
+
+
+
+/* Button styles for Login */
+.form-column button {
+    background-color: #e11d48; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.form-column button:hover {
+    background-color: #fb7185; /* Hover color */
+}
+
+
+
+
+
+.form-column {
+    background-color: white; /* Optional: Background color for the form */
+    padding: 20px; /* Padding around the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

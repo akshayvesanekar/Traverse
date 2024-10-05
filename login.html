@@ -1,0 +1,84 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    Example HTML structure for the Login Form
+    <div class="form-column">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button> This button will use the updated styles
+
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
+
+    <h2>Login</h2>
+    <form id="formLogin">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add CSS for centering the iframe */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        h2 {
+            text-align: center;
+            color: #e11d48; /* Title color */
+        }
+
+        .iframe-container {
+            width: 500px; /* Set the desired width */
+            height: 427px; /* Set the desired height */
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the container */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="iframe-container">
+        <iframe src="loginForm.html"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
